@@ -20,12 +20,14 @@ def ex():
         #       Lat     Lon         Alt   Pitch Roll Yaw Gear
         posi = [37.524, -122.06899, 2500, 0,    0,   0,  1]
         client.sendPOSI(posi)
-        
+
         # Set position of a non-player aircraft
         print "Setting NPC position"
         #       Lat       Lon         Alt   Pitch Roll Yaw Gear
         posi = [37.52465, -122.06899, 2500, 0,    20,   0,  1]
         client.sendPOSI(posi, 1)
+
+        client.selectDATA([44, 45, 46, 47, 48, 49, 50])
 
         # Set angle of attack, velocity, and orientation using the DATA command
         print "Setting orientation"
